@@ -17,7 +17,9 @@ import sendEmail from '../utils/sendEmail.js';
 const router = express.Router();
 
 //!below api is front end api to use to send mail.
-const API = 'https://dulcet-gumdrop-896307.netlify.app';
+
+// const API = 'https://dulcet-gumdrop-896307.netlify.app';
+const API = 'http://localhost:5173';
 router.post('/signup', express.json(), async function (request, response) {
   const { email, emailVerified, password, firstName, lastName, roleId } =
     request.body;
